@@ -1,0 +1,106 @@
+Windows 11 Emoji Font for Windows 10
+Manually install the Windows 11-style flat emoji font on Windows 10.
+
+What This Does
+Replaces your Windows 10 Segoe UI Emoji font with the updated flat-style emoji font from Windows 11.
+
+Disclaimer
+Always backup your original font before making changes
+
+A system restart may be required
+
+Works on Windows 10 only
+
+Manual Installation Instructions
+Step 1: Download the Font
+Download the font file from:
+
+https://raw.githubusercontent.com/einzig-diego/Random-Stuff/refs/heads/main/Windows%2011%20Emojis/seguiemj.ttf
+
+Save it somewhere easy to find (like your Downloads folder or Desktop).
+
+Step 2: Backup Your Original Font
+Open File Explorer and navigate to:
+
+C:\Windows\Fonts
+
+Find any files named:
+
+seguiemj.ttf (or similar emoji-related .ttf files)
+
+Copy these files to a backup folder (e.g., C:\EmojiFontBackup or your Desktop)
+
+Step 3: Install the New Font
+Method A: Drag and Drop (Easiest)
+
+Open C:\Windows\Fonts in File Explorer
+
+Drag the downloaded seguiemj.ttf file into the Fonts folder
+
+Windows will automatically install it (may ask for administrator permission)
+
+Method B: Right-click Install
+
+Right-click the downloaded seguiemj.ttf file
+
+Select Install
+
+Method C: Copy via Command Prompt (Administrator)
+
+copy "%USERPROFILE%\Downloads\seguiemj.ttf" C:\Windows\Fonts\
+
+Step 4: Verify Installation
+Go to C:\Windows\Fonts
+
+Look for "Segoe UI Emoji" in the list
+
+The font should show flat/modern emoji when previewed
+
+Step 5: Restart (Recommended)
+Restart your computer to ensure all applications recognize the new font.
+
+How to Restore Original Font
+Open C:\Windows\Fonts
+
+Find and delete the new Segoe UI Emoji font
+
+Copy your backed-up original font files back into C:\Windows\Fonts
+
+Restart your computer
+
+Registry Information (Advanced)
+If drag-and-drop doesn't work, you can manually register the font:
+
+Press Win + R, type regedit, press Enter
+
+Navigate to:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts
+
+Add a new String Value named:
+
+Segoe UI Emoji (TrueType)
+
+Set the value to: seguiemj.ttf
+
+Troubleshooting
+Font doesn't appear in applications:
+
+Restart your computer
+
+Clear font cache: Delete everything in C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache
+
+Permission denied:
+
+Run File Explorer as Administrator
+
+Right-click → Run as administrator
+
+Font looks corrupted:
+
+Restore your backup font
+
+Redownload the font file (might be corrupted)
+
+Source
+Font provided by einzig-diego/Random-Stuff GitHub repository.
